@@ -13,7 +13,7 @@ ConnectDB()
 app.use('/public',express.static('public'))
 app.use(express.json())
 
-app.use(cors())
+app.use(cors({origin:"https://homeofmovie.onrender.com/",credentials:true}))
 
 
 app.use('/movie',movieRouter)
